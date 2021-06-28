@@ -75,8 +75,12 @@ conver.MDtoHTML("# I'm a big heading.")
 * <blockqoute> / >
 * <code> / `const me = require('you')`
 * Links / [GOOGLE](https://www.google.com "MY BEST FRIEND")
-* Images / ![GOOGLE](https://napidroid.hu/wp-content/uploads/google-logo-header-01.jpg)
+* Images / ![GOOGLE](https://napidroid.hu/wp-content/uploads/google-logo-header-01.jpg)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTheMarci%2Fconverjs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FTheMarci%2Fconverjs?ref=badge_shield)
+
 */
 ```
 And that's all for now.
 Thanks for downloading! 👍
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTheMarci%2Fconverjs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FTheMarci%2Fconverjs?ref=badge_large)
