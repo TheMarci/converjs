@@ -2,6 +2,10 @@
 
 Parse, convert strings, numbers etc. with ease.!
 
+## Stats
+![npm version](https://img.shields.io/npm/v/converjs) ![license](https://img.shields.io/npm/l/converjs) ![release](https://img.shields.io/github/release-date/TheMarci/converjs) ![code size](https://img.shields.io/github/languages/code-size/TheMarci/converjs)
+![gh forks](https://img.shields.io/github/forks/TheMarci/converjs?style=social) ![gh stars](https://img.shields.io/github/stars/TheMarci/converjs?style=social)
+
 ## Installation
 
 `npm i converjs`
@@ -79,6 +83,7 @@ conver.MDtoHTML("# I'm a big heading.")
 */
 
 conver.HTMLtoMD("<h1>I'm a big heading.</h1>")
+// Result: # I'm a big heading.
 // This parser basically supports the same things as above.
 
 conver.semver({
