@@ -77,6 +77,25 @@ conver.MDtoHTML("# I'm a big heading.")
 * Links / [GOOGLE](https://www.google.com "MY BEST FRIEND")
 * Images / ![GOOGLE](https://napidroid.hu/wp-content/uploads/google-logo-header-01.jpg)
 */
+
+conver.HTMLtoMD("<h1>I'm a big heading.</h1>")
+// This parser basically supports the same things as above.
+
+conver.semver({
+  version1: "1.1.4",
+  version2: "", // If not needed just leave an empty string like that or a null
+  check: "valid"
+})
+// Result: true
+// Supported methods from semver (this goes to check property)
+/*
+* valid, clean, staisfies, gt, lt, eq, coerce, major, minor, patch
+* parse, prerelease, diff, neq, gte, lte
+*/
 ```
-And that's all for now.
-Thanks for downloading! 👍
+## Contributing
+To make a pull request go to: https://github.com/TheMarci/converjs/pulls
+You find a bug? Go to: https://github.com/TheMarci/converjs/issues
+
+
+And that's all for now. Thanks for downloading! 👍

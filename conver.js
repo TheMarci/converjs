@@ -78,24 +78,62 @@ class conver {
             console.log(`File successfully saved as ${opts.filename}.${opts.exportAs} !`);
         })
     }
-
     MDtoHTML(markdown) {
         const html = markdown
-        .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-        .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-        .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
-        .replace(/^##### (.*$)/gim, '<h5>$1</h5>')
-        .replace(/^###### (.*$)/gim, '<h6>$1</h6>')
-        .replace(/\*\*\*(.*)\*\*\*/gim, '<strong><em>$1</em></strong>')
-		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-        .replace(/\*(.*)\*/gim, '<i>$1</i>')
-        .replace(/^\> (.*)/gim, '<blockqoute>$1</blockquote>')
-        .replace(/\`(.*)\`/gim, '<code>$1</code>')
-        .replace(/\[(.*?)\]\((.*?) \"(.*?)\"\)/gim, '<a href="$2" title="$3">$1</a>')
-        .replace(/\!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1">')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
+            .replace(/^##### (.*$)/gim, '<h5>$1</h5>')
+            .replace(/^###### (.*$)/gim, '<h6>$1</h6>')
+            .replace(/\*\*\*(.*)\*\*\*/gim, '<strong><em>$1</em></strong>')
+            .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+            .replace(/\*(.*)\*/gim, '<i>$1</i>')
+            .replace(/^\> (.*)/gim, '<blockqoute>$1</blockquote>')
+            .replace(/\`(.*)\`/gim, '<code>$1</code>')
+            .replace(/\[(.*?)\]\((.*?) \"(.*?)\"\)/gim, '<a href="$2" title="$3">$1</a>')
+            .replace(/\!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1">')
 
         return html.trim();
+    }
+    HTMLtoMD(html) {
+        const markdown = html
+            .replace(/\<h1\>(.*)\<\/h1\>/gim, '# $1')
+            .replace(/\<h2\>(.*)\<\/h2\>/gim, '## $1')
+            .replace(/\<h3\>(.*)\<\/h3\>/gim, '### $1')
+            .replace(/\<h4\>(.*)\<\/h4\>/gim, '#### $1')
+            .replace(/\<h5\>(.*)\<\/h5\>/gim, '##### $1')
+            .replace(/\<h6\>(.*)\<\/h6\>/gim, '###### $1')
+            .replace(/\<strong\>\<em\>(.*)\<\/em\>\<\/strong\>/gim, '***$1***')
+            .replace(/\<b\>(.*)\<\/b\>/gim, '**$1**')
+            .replace(/\<i\>(.*)\<\/i\>/gim, '*$1*')
+            .replace(/\<blockqoute\>(.*)\>\/blockqoute\>/gim, '> $1')
+            .replace(/\<code\>(.*)\<\/code\>/gim, '`$1`')
+            .replace(/\<a href=\"(.*?)\" title=\"(.*?)\"\>(.*?)\<\/a\>/gim, '[$3]($1 "$2")')
+            .replace(/\<img src=\"(.*?)\" alt=\"(.*?)\"\>/gim, '![$1]($2)')
+
+        return markdown.trim();
+    }
+    semver(opts = { version1: String, version2: String, check: String }) {
+        const semver = require('semver');
+        
+        if (opts.check == "valid") return semver.valid(opts.version1);
+        else if (opts.check == "clean") return semver.clean(opts.version1);
+        else if (opts.check == "satisfies") return semver.satisfies(opts.version1);
+        else if (opts.check == "gt") return semver.gt(opts.version1);
+        else if (opts.check == "lt") return semver.lt(opts.version1);
+        else if (opts.check == "eq") return semver.eq(opts.version1);
+        else if (opts.check == "minVersion") return semver.minVersion(opts.version1);
+        else if (opts.check == "coerce") return semver.valid(semver.coerce(opts.version1));
+        else if (opts.check == "major") return semver.major(opts.version1);
+        else if (opts.check == "minior") return semver.minor(opts.version1);
+        else if (opts.check == "patch") return semver.patch(opts.version1);
+        else if (opts.check == "parse") return semver.parse(opts.version1);
+        else if (opts.check == "prerelease") return semver.prerelease(opts.version1);
+        else if (opts.check == "diff") return semver.diff(opts.version1, opts.version2);
+        else if (opts.check == "neq") return semver.neq(opts.version1, opts.version2);
+        else if (opts.check == "gte") return semver.gte(opts.version1, opts.version2);
+        else if (opts.check == "lte") return semver.lte(opts.version1, opts.version2);
     }
 }
 
