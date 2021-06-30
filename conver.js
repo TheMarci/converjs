@@ -114,27 +114,6 @@ class conver {
 
         return markdown.trim();
     }
-    semver(opts = { version1: String, version2: String, check: String }) {
-        const semver = require('semver');
-        
-        if (opts.check == "valid") return semver.valid(opts.version1);
-        else if (opts.check == "clean") return semver.clean(opts.version1);
-        else if (opts.check == "satisfies") return semver.satisfies(opts.version1);
-        else if (opts.check == "gt") return semver.gt(opts.version1);
-        else if (opts.check == "lt") return semver.lt(opts.version1);
-        else if (opts.check == "eq") return semver.eq(opts.version1);
-        else if (opts.check == "minVersion") return semver.minVersion(opts.version1);
-        else if (opts.check == "coerce") return semver.valid(semver.coerce(opts.version1));
-        else if (opts.check == "major") return semver.major(opts.version1);
-        else if (opts.check == "minior") return semver.minor(opts.version1);
-        else if (opts.check == "patch") return semver.patch(opts.version1);
-        else if (opts.check == "parse") return semver.parse(opts.version1);
-        else if (opts.check == "prerelease") return semver.prerelease(opts.version1);
-        else if (opts.check == "diff") return semver.diff(opts.version1, opts.version2);
-        else if (opts.check == "neq") return semver.neq(opts.version1, opts.version2);
-        else if (opts.check == "gte") return semver.gte(opts.version1, opts.version2);
-        else if (opts.check == "lte") return semver.lte(opts.version1, opts.version2);
-    }
 }
 
 module.exports = conver;
