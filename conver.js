@@ -9,7 +9,6 @@ class conver {
     toCelsius(fahrenheit) {
         var fahrTemp = fahrenheit;
         var cTemp = (fahrTemp - 32) / 1.8;
-
         if (cTemp < .5) return Math.floor(cTemp);
         else return Math.round(cTemp);
     }
@@ -113,6 +112,40 @@ class conver {
             .replace(/\<img src=\"(.*?)\" alt=\"(.*?)\"\>/gim, '![$1]($2)')
 
         return markdown.trim();
+    }
+    Length(opts = { length: Number, from: String, to: String }) {
+        if (opts.from == "miles" && opts.to == "km") return opts.length * 1.609344;
+         else if (opts.from == "km" && opts.to == "miles") return opts.length * 0.6214;
+         else if (opts.from == "km" && opts.to == "m") return opts.length * 1000;
+         else if (opts.from == "km" && opts.to == "cm") return opts.length * 100000;
+         else if (opts.from == "km" && opts.to == "mm") return opts.length * 1000000;
+         else if (opts.from == "m" && opts.to == "km") return opts.length / 1000;
+         else if (opts.from == "m" && opts.to == "cm") return opts.length * 100;
+         else if (opts.from == "m" && opts.to == "mm") return opts.length * 1000;
+         else if (opts.from == "cm" && opts.to == "m") return opts.length / 100;
+         else if (opts.from == "cm" && opts.to == "mm") return opts.length * 10;
+         else if (opts.from == "miles" && opts.to == "feet") return opts.length * 5280;
+         else if (opts.from == "miles" && opts.to == "yards") return opts.length * 1760;
+        
+    }
+    Mass(opts = { "mass": Number, "from": String, "to": String }) {
+        if (opts.from == "t" && opts.to == "kg") return opts.mass * 1000;
+        else if (opts.from == "kg" && opts.to == "g") return opts.mass * 1000;
+        else if (opts.from == "g" && opts.to == "kg") return opts.mass / 1000;
+        else if (opts.from == "g" && opts.to == "mg") return opts.mass * 1000;
+        else if (opts.from == "mg" && opts.to == "g") return opts.mass / 1000;
+        else if (opts.from == "kg" && opts.to == "mg") return opts.mass * 1000000;
+        else if (opts.from == "mg" && opts.to == "kg") return opts.mass / 1000000;
+        else if (opts.from == "g" && opts.to == "cg") return opts.mass * 100;
+        else if (opts.from == "cg" && opts.to == "mg") return opts.mass * 10;
+    }
+    Data(opts = { "value": Number, "from": String, "to": String }) {
+        if (opts.from == "tb" && opts.to == "gb") return opts.value * 1024;
+        else if (opts.from == "gb" && opts.to == "mb") return opts.value * 1024;
+        else if (opts.from == "gb" && opts.to == "kb") return opts.value * 1048576;
+        else if (opts.from == "gb" && opts.to == "b") return opts.value * 1073741824;
+        else if (opts.from == "mb" && opts.to == "kb") return opts.value * 1024;
+        else if (opts.from == "kb" && opts.to == "b") return opts.value * 1024;
     }
 }
 

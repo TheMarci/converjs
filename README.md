@@ -6,6 +6,9 @@ Parse, convert strings, numbers etc. with ease.!
 ![npm version](https://img.shields.io/npm/v/converjs) ![license](https://img.shields.io/npm/l/converjs) ![release](https://img.shields.io/github/release-date/TheMarci/converjs) ![code size](https://img.shields.io/github/languages/code-size/TheMarci/converjs)
 ![gh forks](https://img.shields.io/github/forks/TheMarci/converjs?style=social) ![gh stars](https://img.shields.io/github/stars/TheMarci/converjs?style=social)
 
+## Before Installation
+`npm init -y`
+
 ## Installation
 
 `npm i converjs`
@@ -85,13 +88,68 @@ conver.MDtoHTML("# I'm a big heading.")
 conver.HTMLtoMD("<h1>I'm a big heading.</h1>")
 // Result: # I'm a big heading.
 // This parser basically supports the same things as above.
+
+conver.Length({
+  length: 10,
+  from: "km",
+  to: "miles"
+})
+// Result: 6.2139999999999995
+/* Options
+* from    to
+* miles   km
+* km      miles
+* km      m
+* km      cm
+* km      mm
+* m       km
+* m       cm
+* m       mm
+* cm      m
+* cm      mm
+* miles   feet
+* miles   yards
+*/
+conver.Mass({
+  mass: 10,
+  from: "kg",
+  to: "g"
+})
+// Result: 10000
+/* Options
+* from    to
+* t       kg
+* kg      g
+* g       kg
+* g       mg
+* mg      g
+* kg      mg
+* mg      kg
+* g       cg
+* cg      mg
+*/
+
+conver.Data({
+  value: 10,
+  from: "gb",
+  to: "mb"
+})
+// Result: 10240
+/* Options
+* from    to
+* tb      gb
+* gb      mb
+* gb      kb
+* gb      b
+* mb      kb
+* kb      b
+*/
 ```
 ## License
 [MIT](https://github.com/TheMarci/converjs/blob/main/LICENSE)
 
 ## Contributing
-To make a pull request go to: https://github.com/TheMarci/converjs/pulls
-You find a bug? Go to: https://github.com/TheMarci/converjs/issues
-
-
+To make a pull request go to: https://github.com/TheMarci/converjs/pulls  
+You find a bug? Go to: https://github.com/TheMarci/converjs/issues  
+  
 And that's all for now. Thanks for downloading! 👍
