@@ -151,5 +151,8 @@ conver.Data({
 ## Contributing
 To make a pull request go to: https://github.com/TheMarci/converjs/pulls  
 You find a bug? Go to: https://github.com/TheMarci/converjs/issues  
-  
+
+## Donate
+[Buy me a basketball](https://www.buymeacoffee.com/themarci)
+
 And that's all for now. Thanks for downloading! 👍
