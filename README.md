@@ -3,10 +3,16 @@
 Parse, convert strings, numbers etc. with ease.!
 
 ## Stats
+
 ![npm version](https://img.shields.io/npm/v/converjs) ![license](https://img.shields.io/npm/l/converjs) ![release](https://img.shields.io/github/release-date/TheMarci/converjs) ![code size](https://img.shields.io/github/languages/code-size/TheMarci/converjs)
 ![gh forks](https://img.shields.io/github/forks/TheMarci/converjs?style=social) ![gh stars](https://img.shields.io/github/stars/TheMarci/converjs?style=social)
 
+## Changelog
+
+[CHANGELOG.md](https://github.com/TheMarci/converjs/blob/main/CHANGELOG.md)
+
 ## Before Installation
+
 `npm init -y`
 
 ## Installation
@@ -20,12 +26,12 @@ const converjs = require("converjs/conver.js");
 
 const conver = new converjs();
 
-// Methods   
+// Methods
 
 conver.jsonParse('{"fruit": "apple"}');
 // Result: { fruit: 'apple' }
 
-conver.jsonStringify({fruit: "apple"});
+conver.jsonStringify({ fruit: "apple" });
 // Result: {"fruit": "apple"}
 
 conver.toCelsius(50);
@@ -59,97 +65,109 @@ conver.Base64Decode("WW91J3JlIGNvb2wh");
 // Result: You're cool!
 
 conver.Currency({
-    price: 100,
-    from: "USD",
-    to: "EUR"
-})
+  price: 100,
+  from: "USD",
+  to: "EUR",
+});
 // Result: 84.3028 (This might change when you try it.)
 
 conver.FileStream({
   text: "I'm cool!",
   filename: "cool",
-  exportAs: "txt" // or in any file format
-})
+  exportAs: "txt", // or in any file format
+});
 // Result: A file.
 
-conver.MDtoHTML("# I'm a big heading.")
+conver.MDtoHTML("# I'm a big heading.");
 // Result: <h1>I'm a big heading.</h1>
 // This markdown parser currently supports:
 /*
-* All heading from h1 to h6 / #,##,### etc.
-* Bold and Italic / *asd* , **asd**
-* <strong><em> / ***asd***
-* <blockqoute> / >
-* <code> / `const me = require('you')`
-* Links / [GOOGLE](https://www.google.com "MY BEST FRIEND")
-* Images / ![GOOGLE](https://napidroid.hu/wp-content/uploads/google-logo-header-01.jpg)
-*/
+ * All heading from h1 to h6 / #,##,### etc.
+ * Bold and Italic / *asd* , **asd**
+ * <strong><em> / ***asd***
+ * <blockqoute> / >
+ * <code> / `const me = require('you')`
+ * Links / [GOOGLE](https://www.google.com "MY BEST FRIEND")
+ * Images / ![GOOGLE](https://napidroid.hu/wp-content/uploads/google-logo-header-01.jpg)
+ */
 
-conver.HTMLtoMD("<h1>I'm a big heading.</h1>")
+conver.HTMLtoMD("<h1>I'm a big heading.</h1>");
 // Result: # I'm a big heading.
 // This parser basically supports the same things as above.
 
 conver.Length({
   length: 10,
   from: "km",
-  to: "miles"
-})
+  to: "miles",
+});
 // Result: 6.2139999999999995
 /* Options
-* from    to
-* miles   km
-* km      miles
-* km      m
-* km      cm
-* km      mm
-* m       km
-* m       cm
-* m       mm
-* cm      m
-* cm      mm
-* miles   feet
-* miles   yards
-*/
+ * from    to
+ * miles   km
+ * km      miles
+ * km      m
+ * km      cm
+ * km      mm
+ * m       km
+ * m       cm
+ * m       mm
+ * cm      m
+ * cm      mm
+ * miles   feet
+ * miles   yards
+ */
 conver.Mass({
   mass: 10,
   from: "kg",
-  to: "g"
-})
+  to: "g",
+});
 // Result: 10000
 /* Options
-* from    to
-* t       kg
-* kg      g
-* g       kg
-* g       mg
-* mg      g
-* kg      mg
-* mg      kg
-* g       cg
-* cg      mg
-*/
+ * from    to
+ * t       kg
+ * kg      g
+ * g       kg
+ * g       mg
+ * mg      g
+ * kg      mg
+ * mg      kg
+ * g       cg
+ * cg      mg
+ */
 
 conver.Data({
   value: 10,
   from: "gb",
-  to: "mb"
-})
+  to: "mb",
+});
 // Result: 10240
 /* Options
-* from    to
-* tb      gb
-* gb      mb
-* gb      kb
-* gb      b
-* mb      kb
-* kb      b
-*/
+ * from    to
+ * tb      gb
+ * gb      mb
+ * gb      kb
+ * gb      b
+ * mb      kb
+ * kb      b
+ */
+
+conver.BBCodeToHTML("[b]I'm bold[/b]");
+// Result: <b>I'm bold</b>
+/* Supported BBCode
+ * [b], [i], [u], [s]
+ * [url], [img], [email]
+ * [color], [size]
+ * [quote], [code]
+ */
 ```
+
 ## License
+
 [MIT](https://github.com/TheMarci/converjs/blob/main/LICENSE)
 
 ## Contributing
+
 To make a pull request go to: https://github.com/TheMarci/converjs/pulls  
-You find a bug? Go to: https://github.com/TheMarci/converjs/issues  
-  
+You find a bug? Go to: https://github.com/TheMarci/converjs/issues
+
 And that's all for now. Thanks for downloading! 👍

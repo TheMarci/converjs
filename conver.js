@@ -147,6 +147,21 @@ class conver {
         else if (opts.from == "mb" && opts.to == "kb") return opts.value * 1024;
         else if (opts.from == "kb" && opts.to == "b") return opts.value * 1024;
     }
+    BBCodeToHTML(bbcode) {
+        const html = bbcode
+            .replace(/\[b\](.*)\[\/b\]/gim, '<b>$1</b>')
+            .replace(/\[i\](.*)\[\/i\]/gim, '<i>$1</i>')
+            .replace(/\[u\](.*)\[\/u\]/gim, '<u>$1</u>')
+            .replace(/\[url=(.*)\](.*)\[\/url\]/gim, '<a href="$1">$2</a>')
+            .replace(/\[img\](.*)\[\/img\]/gim, '<img src="$1">')
+            .replace(/\[quote\](.*)\[\/quote\]/gim, '<blockquote>$1</blockquote>')
+            .replace(/\[code\](.*)\[\/code\]/gim, '<pre>$1</pre>')
+            .replace(/\[size=(.*)\](.*)\[\/size\]/gim, '<span stlye="font-size: $1">$2</span>')
+            .replace(/\[s\](.*)\[\/s\]/gim, '<s>$1</s>')
+            .replace(/\[color=(.*)\](.*)\[\/color\]/gim, '<span style="color: $1">$2</span>')
+            .replace(/\[email\](.*)\[\/email\]/gim, '<address><a href="mailto:$1"></a></address>')
+        return html.trim();
+    }
 }
 
 module.exports = conver;

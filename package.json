@@ -29,7 +29,8 @@
     "html to md",
     "mass",
     "length",
-    "data"
+    "data",
+    "bbcode to html"
   ],
   "author": "TheMarci",
   "license": "MIT",

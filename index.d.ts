@@ -44,5 +44,6 @@ declare module "converjs" {
             from: StringConstructor;
             to: StringConstructor;
         }): number;
+        BBCodeToHTML(bbcode: string): string;
     }
 }
