@@ -162,6 +162,21 @@ class conver {
             .replace(/\[email\](.*)\[\/email\]/gim, '<address><a href="mailto:$1"></a></address>')
         return html.trim();
     }
+    HTMLToBBCode(html) {
+        const bbcode = html
+            .replace(/\<b\>(.*)\<\/b\>/gim, '[b]$1[/b]')
+            .replace(/\<i\>(.*)\<\/i\>/gim, '[i]$1[/i]')
+            .replace(/\<u\>(.*)\<\/u\>/gim, '[u]$1[/u]')
+            .replace(/\<a href=\"(.*?)\>(.*?)\<\/a\>\"/gim, '[url=$1]$2[/url]')
+            .replace(/\<img src=\"(.*?)\"\>/gim, '[img]$1[/img]')
+            .replace(/\<blockqoute\>(.*)\<\/blockqoute\>/gim, '[quote]$1[[/qoute]]')
+            .replace(/\<pre\>(.*)\<\/pre\>/gim, '[code]$1[/code]')
+            .replace(/\<span stlye=\"font-size: (.*)\"\>(.*)\<\/span\>/gim, '[size=$1]$2[/size]')
+            .replace(/\<s\>(.*)\<\/s\</gim, '[s]$1[/s]')
+            .replace(/\<span style=\"color: (.*)\"\>(.*)\<\/span\>/gim, '[color=$1]$2[/color]')
+            .replace(/\<address\>\<a href=\"mailto:(.*)\"\>\<a\/a\>\<\/address\>/gim, '[email]$1[/email]')
+        return bbcode.trim();
+    }
 }
 
 module.exports = conver;

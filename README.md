@@ -159,6 +159,15 @@ conver.BBCodeToHTML("[b]I'm bold[/b]");
  * [color], [size]
  * [quote], [code]
  */
+
+conver.HTMLToBBCode("<i>I'm italian!</i>");
+// Result: [i]I'm italian![/i]
+/* Supported HTML
+ * <b>, <i>, <u>, <s>
+ * <a>, <img>, <address><a href="mailto:">
+ * <span style="color: #">, <span style="font-size: 0>
+ * <blockqoute>, <pre>
+ */
 ```
 
 ## License

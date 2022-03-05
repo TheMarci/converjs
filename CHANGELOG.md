@@ -2,6 +2,10 @@
 
 **Latest version will be always on top.**
 
+## 1.2.4
+
+- Addded HTML to BBCode parser
+
 ## 1.2.3
 
 - Added BBCode to HTML parser
