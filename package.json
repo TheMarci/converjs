@@ -1,6 +1,6 @@
 {
   "name": "converjs",
-  "version": "1.2.5",
+  "version": "1.2.4",
   "description": "An easy way to convert & parse things!",
   "main": "conver.js",
   "scripts": {
