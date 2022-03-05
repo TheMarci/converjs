@@ -1,6 +1,6 @@
 {
   "name": "converjs",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "An easy way to convert & parse things!",
   "main": "conver.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "homepage": "https://github.com/TheMarci/converjs#readme",
   "repository": {
     "url": "https://github.com/TheMarci/converjs"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "types": "./index.d.ts",
   "keywords": [
