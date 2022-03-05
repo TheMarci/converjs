@@ -2,10 +2,6 @@
 
 **Latest version will be always on top.**
 
-## 1.2.5
-
-- GitHub fix
-
 ## 1.2.4
 
 - Addded HTML to BBCode parser
