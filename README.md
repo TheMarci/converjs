@@ -181,4 +181,4 @@ Have a suggestion or found a bug?
 - **Pull Requests**: https://github.com/TheMarci/converjs/pulls  
 - **Report Issues**: https://github.com/TheMarci/converjs/issues
 
-We appreciate your contributions! Thanks for using ConverJS! 👍
+I appreciate your contributions! Thanks for using ConverJS! 👍
