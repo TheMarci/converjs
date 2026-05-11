@@ -11,7 +11,7 @@
     "url": "https://github.com/TheMarci/converjs"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry":"https://www.npmjs.com"
   },
   "types": "./index.d.ts",
   "keywords": [
