@@ -1,7 +1,7 @@
 {
   "name": "converjs",
-  "version": "1.3.0",
-  "description": "An easy way to convert & parse things!",
+  "version": "2.0.0",
+  "description": "An easy way to convert, validate & parse things!",
   "main": "conver.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/TheMarci/converjs#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheMarci/converjs.git"
+    "url": "https://github.com/TheMarci/converjs"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -35,7 +35,8 @@
     "length",
     "data",
     "bbcode to html",
-    "html to bbcode"
+    "html to bbcode",
+    "validate"
   ],
   "author": "TheMarci",
   "license": "MIT",
