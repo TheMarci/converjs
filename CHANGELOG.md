@@ -2,6 +2,56 @@
 
 **Latest version will be always on top.**
 
+## [2.0.0] - 2026-05-17
+
+### ⚡ Async/Await Support
+- **Added `currencyAsync()`**: Real-time live currency conversion using async/await
+- **Added `FileStreamAsync()`**: Non-blocking file operations via async streams
+- **Added `batchConvertAsync()`**: Asynchronously process multiple conversions in parallel
+
+### 🌡️ Expanded Temperature Units
+- **Added Kelvin support**: `toKelvin()` and `fromKelvin()`
+- **Added Rankine support**: `toRankine()` and `fromRankine()`
+
+### 📐 Expanded Unit Conversions
+- **Expanded `Mass()`**: Added pounds, ounces, and stones
+- **Expanded `Length()`**: Added inches ↔ centimetres conversions
+
+### 🔗 Chainable API
+- **Added `_addToChain()`**: Queue multiple conversion operations fluently
+- **Added `execute()`**: Run the full chain and return results
+
+### 📦 Batch Conversion
+- **Added `batchConvert()`**: Synchronously process multiple conversions at once
+- **Added `batchConvertAsync()`**: Asynchronous counterpart for non-blocking batch processing
+
+### 🌍 Locale & Timezone Support
+- **Updated `MsToDate()`**: Now accepts an options object with `locale` and `timezone` fields e.g. `{ locale: 'de-DE', timezone: 'Europe/Berlin' }`
+
+### 📝 Parsing
+- **Added `CSVtoJSON()` and `JSONtoCSV()`**: Convert between CSV and JSON formats
+- **Added `YAMLtoJSON()` and `JSONtoYAML()`**: Convert between YAML and JSON formats
+- **Added `XMLtoJSON()`**: Async XML-to-JSON parser
+
+### 🔤 String Manipulation
+- **Added `toSlug()`**: Convert a string to a URL-friendly slug
+- **Added `toCamelCase()`**: Convert to camelCase
+- **Added `toSnakeCase()`**: Convert to snake_case
+- **Added `toKebabCase()`**: Convert to kebab-case
+- **Added `toPascalCase()`**: Convert to PascalCase
+- **Added `truncate()`**: Truncate a string to a specified length
+
+### ✅ Validation
+- **Added `isValidEmail()`**: Validate email address format
+- **Added `isValidURL()`**: Validate URL format
+- **Added `isValidHex()`**: Validate hexadecimal colour codes
+- **Added `isValidJSON()`**: Check whether a string is valid JSON
+- **Added `isValidIPv4()`**: Validate IPv4 addresses
+- **Added `isValidPhoneNumber()`**: Validate phone number format
+- **Added `isValidPassword()`**: Check password strength against configurable rules
+
+---
+
 ## [1.3.0] - 2026-05-11
 
 ### 🐛 Bug Fixes
